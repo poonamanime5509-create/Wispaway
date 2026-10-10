@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wispaway – Terms of Use &amp; Privacy Policy</title>
+<meta name="description" content="Terms of Use and Privacy Policy for Wispaway, a calm arrow-escape logic puzzle by Logic Arc Studios. No accounts, no analytics, no tracking.">
+<style>
+:root{
+  --mist:#edf0f8;
+  --paper:#f8f9fd;
+  --ink:#16163a;
+  --ink-soft:#4a4c72;
+  --dusk:#4a4fa3;
+  --dusk-tint:#dde1f5;
+  --line:#cfd4ea;
+  --focus:#2b6fd6;
+  --display:"Segoe UI",system-ui,sans-serif;
+  --body:Georgia,"Times New Roman",serif;
+  --ui:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --mist:#0f1126;
+    --paper:#151833;
+    --ink:#e7e9f7;
+    --ink-soft:#a5a9cf;
+    --dusk:#a9aef2;
+    --dusk-tint:#23275a;
+    --line:#2b2f63;
+    --focus:#8db5ff;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1.5rem}
+body{
+  margin:0;background:var(--mist);color:var(--ink);
+  font-family:var(--body);font-size:1.0625rem;line-height:1.72;
+  -webkit-text-size-adjust:100%;
+}
+a{color:var(--dusk);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--mist);padding:.6rem 1rem;z-index:10;font-family:var(--ui)}
+.skip:focus{left:1rem;top:1rem}
+
+/* ---------- masthead ---------- */
+.masthead{
+  max-width:1120px;margin:0 auto;padding:3.5rem 1.5rem 2.5rem;
+  display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;
+}
+.brand{font-family:var(--display);font-weight:700;font-size:clamp(3rem,9vw,5.5rem);line-height:.95;letter-spacing:-.035em;margin:0}
+.masthead .sub{font-family:var(--display);font-weight:500;font-size:clamp(1.15rem,2.6vw,1.5rem);color:var(--ink-soft);margin:.9rem 0 0;letter-spacing:-.01em}
+.facts{margin:1.6rem 0 0;padding:0;list-style:none;font-family:var(--ui);font-size:.9rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:.4rem 1.6rem}
+.facts b{color:var(--ink);font-weight:600}
+.jump{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem;font-family:var(--ui)}
+.jump a{
+  text-decoration:none;font-size:.95rem;font-weight:600;color:var(--ink);
+  border:1.5px solid var(--ink);border-radius:999px;padding:.5rem 1.15rem;
+}
+.jump a:hover{background:var(--ink);color:var(--mist)}
+
+/* the one memorable thing: a tiny puzzle where one arrow escapes */
+.puzzle{width:min(190px,34vw);height:auto;overflow:visible;flex:none}
+.puzzle .cell{fill:var(--paper);stroke:var(--line);stroke-width:1.5}
+.puzzle .arrow{fill:none;stroke:var(--dusk);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.puzzle .escape{animation:wisp 1.5s cubic-bezier(.5,0,.8,.4) .9s 1 both}
+@keyframes wisp{
+  0%{transform:translateX(0);opacity:1}
+  25%{transform:translateX(-5px);opacity:1}
+  100%{transform:translateX(120px);opacity:0}
+}
+
+/* ---------- layout ---------- */
+.shell{
+  max-width:1120px;margin:0 auto;padding:0 1.5rem 4rem;
+  display:grid;grid-template-columns:250px minmax(0,1fr);gap:3.5rem;align-items:start;
+}
+.toc{position:sticky;top:1.5rem;font-family:var(--ui);font-size:.9rem;max-height:calc(100vh - 3rem);overflow:auto;padding-right:.5rem}
+.toc summary{font-weight:700;font-size:.95rem;cursor:pointer;list-style:none;padding:.2rem 0 .6rem}
+.toc summary::-webkit-details-marker{display:none}
+.toc h2{font-family:var(--display);font-size:.95rem;margin:1.1rem 0 .35rem;color:var(--ink);letter-spacing:0}
+.toc h2:first-of-type{margin-top:0}
+.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.toc li a{
+  display:block;padding:.28rem .8rem;margin-left:-2px;border-left:2px solid transparent;
+  color:var(--ink-soft);text-decoration:none;line-height:1.35
+}
+.toc li a:hover{color:var(--ink)}
+.toc li a.on{color:var(--dusk);border-left-color:var(--dusk);font-weight:600}
+
+main{min-width:0}
+.panel{
+  background:var(--paper);border:1px solid var(--line);border-radius:14px;
+  padding:clamp(1.4rem,3vw,2.2rem);margin-bottom:3.5rem;
+}
+.panel h2{font-family:var(--display);font-size:1.4rem;margin:0 0 1rem;letter-spacing:-.015em;line-height:1.2}
+.short{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.short > div:first-child{padding-right:2rem;border-right:1px solid var(--line)}
+.short > div:last-child{padding-left:2rem}
+.short h3{font-family:var(--display);font-size:1.05rem;margin:0 0 .6rem}
+.short ul{margin:0;padding-left:1.15rem}
+.short li{margin:.35rem 0}
+.panel .note{margin:1.2rem 0 0;font-size:.95rem;color:var(--ink-soft)}
+
+.part{margin-bottom:4.5rem}
+.part > header{border-top:3px solid var(--ink);padding-top:1.1rem;margin-bottom:2rem}
+.part > header h2{font-family:var(--display);font-size:clamp(2rem,5vw,3rem);line-height:1.05;letter-spacing:-.03em;margin:0}
+.part > header p{margin:.7rem 0 0;color:var(--ink-soft);max-width:60ch}
+.part{counter-reset:clause}
+
+.clause{margin:0 0 2.4rem;max-width:68ch}
+.clause h3{
+  counter-increment:clause;position:relative;
+  font-family:var(--display);font-weight:700;font-size:1.3rem;line-height:1.25;letter-spacing:-.012em;margin:0 0 .6rem;
+}
+.clause h3::before{
+  content:counter(clause) ".";color:var(--dusk);margin-right:.5rem;font-weight:500;
+}
+.clause p{margin:.7rem 0}
+.clause ul,.clause ol{margin:.7rem 0;padding-left:1.4rem}
+.clause li{margin:.4rem 0}
+.clause li::marker{color:var(--dusk)}
+.clause strong{font-weight:600}
+.sub-h{font-family:var(--display);font-weight:700;font-size:1.02rem;margin:1.3rem 0 .2rem}
+.callout{
+  margin:1rem 0;padding:.9rem 1.15rem;background:var(--dusk-tint);
+  border-left:4px solid var(--dusk);border-radius:0 10px 10px 0;font-size:1rem
+}
+.callout p{margin:.3rem 0}
+
+.tablewrap{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-family:var(--ui);font-size:.92rem;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:.7rem .9rem;border-bottom:1px solid var(--line)}
+th{font-family:var(--display);font-size:.9rem;background:var(--dusk-tint)}
+tr:last-child td{border-bottom:0}
+
+.contactbox{
+  display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;align-items:center;margin:1rem 0;
+  padding:1rem 1.2rem;border:1.5px solid var(--ink);border-radius:12px;font-family:var(--ui)
+}
+.contactbox a{font-weight:600;font-size:1.02rem;word-break:break-all}
+.contactbox button{
+  font:inherit;font-size:.88rem;font-weight:600;cursor:pointer;background:transparent;color:var(--ink);
+  border:1.5px solid var(--line);border-radius:999px;padding:.35rem .9rem
+}
+.contactbox button:hover{border-color:var(--ink)}
+
+footer.site{
+  max-width:1120px;margin:0 auto;padding:2rem 1.5rem 3rem;border-top:1px solid var(--line);
+  font-family:var(--ui);font-size:.88rem;color:var(--ink-soft);
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem 2rem
+}
+
+/* ---------- small screens ---------- */
+@media (max-width:899px){
+  .masthead{grid-template-columns:1fr;padding-top:2.5rem}
+  .puzzle{order:-1;width:120px}
+  .shell{grid-template-columns:1fr;gap:1.5rem}
+  .toc{position:static;max-height:none;overflow:visible;padding:0}
+  .toc > details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:.7rem 1rem}
+  .toc summary{padding-bottom:.2rem}
+  .toc details[open] summary{padding-bottom:.6rem}
+  .short{grid-template-columns:1fr}
+  .short > div:first-child{padding:0 0 1.2rem;border-right:0;border-bottom:1px solid var(--line)}
+  .short > div:last-child{padding:1.2rem 0 0}
+}
+@media (min-width:900px){
+  .toc summary{pointer-events:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .puzzle .escape{animation:none}
+}
+@media print{
+  body{background:#fff;color:#000;font-size:11pt}
+  .toc,.jump,.puzzle,.contactbox button,.skip{display:none!important}
+  .shell{display:block;padding:0}
+  .panel{border-color:#999;break-inside:avoid}
+  .clause{break-inside:avoid}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the policies</a>
+
+<header class="masthead">
+  <div>
+    <h1 class="brand">Wispaway</h1>
+    <p class="sub">Terms of Use and Privacy Policy</p>
+    <ul class="facts">
+      <li><b>Last updated</b> October 9, 2026</li>
+      <li><b>Publisher</b> Logic Arc Studios</li>
+      <li><b>Contact</b> <a href="mailto:Poonamanime5509@gmail.com">Poonamanime5509@gmail.com</a></li>
+    </ul>
+    <nav class="jump" aria-label="Jump to a part">
+      <a href="#terms">Terms of Use</a>
+      <a href="#privacy">Privacy Policy</a>
+    </nav>
+  </div>
+
+  <!-- decorative: one arrow slides out of the grid, like in the game -->
+  <svg class="puzzle" viewBox="0 0 148 148" aria-hidden="true" focusable="false">
+    <g>
+      <rect class="cell" x="0"   y="0"   width="44" height="44" rx="10"/>
+      <rect class="cell" x="52"  y="0"   width="44" height="44" rx="10"/>
+      <rect class="cell" x="104" y="0"   width="44" height="44" rx="10"/>
+      <rect class="cell" x="0"   y="52"  width="44" height="44" rx="10"/>
+      <rect class="cell" x="52"  y="52"  width="44" height="44" rx="10"/>
+      <rect class="cell" x="104" y="52"  width="44" height="44" rx="10"/>
+      <rect class="cell" x="0"   y="104" width="44" height="44" rx="10"/>
+      <rect class="cell" x="52"  y="104" width="44" height="44" rx="10"/>
+      <rect class="cell" x="104" y="104" width="44" height="44" rx="10"/>
+    </g>
+    <g transform="translate(22 22) rotate(0)"><path class="arrow" d="M-9 0H9M3 -6L9 0L3 6"/></g>
+    <g transform="translate(74 22) rotate(90)"><path class="arrow" d="M-9 0H9M3 -6L9 0L3 6"/></g>
+    <g transform="translate(126 22) rotate(180)"><path class="arrow" d="M-9 0H9M3 -6L9 0L3 6"/></g>
+    <g transform="translate(22 74) rotate(270)"><path class="arrow" d="M-9 0H9M3 -6L9 0L3 6"/></g>
+    <g transform="translate(74 74) rotate(90)"><path class="arrow" d="M-9 0H9M3 -6L9 0L3 6"/></g>
+    <g transform="translate(126 74) rotate(0)"><g class="escape"><path class="arrow" d="M-9 0H9M3 -6L9 0L3 6"/></g></g>
+    <g transform="translate(22 126) rotate(180)"><path class="arrow" d="M-9 0H9M3 -6L9 0L3 6"/></g>
+    <g transform="translate(74 126) rotate(270)"><path class="arrow" d="M-9 0H9M3 -6L9 0L3 6"/></g>
+    <g transform="translate(126 126) rotate(0)"><path class="arrow" d="M-9 0H9M3 -6L9 0L3 6"/></g>
+  </svg>
+</header>
+
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <details id="tocDetails" open>
+      <summary>Contents</summary>
+      <h2>Terms of Use</h2>
+      <ol id="tocTerms"></ol>
+      <h2>Privacy Policy</h2>
+      <ol id="tocPrivacy"></ol>
+    </details>
+  </nav>
+
+  <main id="main">
+
+    <section class="panel" aria-labelledby="short-title">
+      <h2 id="short-title">The short version</h2>
+      <div class="short">
+        <div>
+          <h3>Playing Wispaway</h3>
+          <ul>
+            <li>Play for fun, on your own time, for free personal use.</li>
+            <li>Don’t copy, resell, reverse engineer or re-upload the game.</li>
+            <li>The game, its levels and its code belong to Logic Arc Studios, apart from open-source parts credited below.</li>
+            <li>Only turn pictures into levels if you have the right to use them.</li>
+            <li>The game is provided as it is. Progress lives in your browser and can be lost.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Your data</h3>
+          <ul>
+            <li>No accounts, no sign-in, no analytics, no tracking.</li>
+            <li>We run no server that receives your information, so we hold no personal data about you.</li>
+            <li>Progress and settings are saved in your browser’s local storage, on your device only.</li>
+            <li>Pictures you choose are processed in your browser and never uploaded.</li>
+            <li>The hosting site and the file service that delivers the confetti effect (jsDelivr) may see your IP address, like any website. Portals may also show ads under their own policies.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">This summary is for convenience. The full terms below are what apply.</p>
+    </section>
+
+    <!-- ===================== PART A: TERMS ===================== -->
+    <section class="part" id="terms" aria-labelledby="terms-title">
+      <header>
+        <h2 id="terms-title">Terms of Use</h2>
+        <p>The rules for playing Wispaway. They are short on purpose and written in plain language.</p>
+      </header>
+
+      <article class="clause" id="t-agreement">
+        <h3>Agreement and who we are</h3>
+        <p>Wispaway (“the game”) is a calm arrow-escape logic puzzle that runs in your web browser. It is published by <strong>Logic Arc Studios</strong> (“we”, “us”, “our”). By opening, playing or otherwise using the game, you agree to these Terms of Use. If you do not agree, please do not use the game.</p>
+        <p>These terms sit alongside our <a href="#privacy">Privacy Policy</a> on this same page. Together they describe how the game works and how we treat your information.</p>
+      </article>
+
+      <article class="clause" id="t-eligibility">
+        <h3>Who can play</h3>
+        <p>The game is designed to be gentle and suitable for a general audience, and it does not ask you for any personal information. If you are under the age at which you can agree to terms in your country, please ask a parent or guardian to read these terms with you before you play.</p>
+      </article>
+
+      <article class="clause" id="t-license">
+        <h3>What you may do</h3>
+        <p>We give you a personal, non-exclusive, non-transferable, revocable licence to play the game for your own non-commercial entertainment. This includes using the game’s features as they are offered to you: the built-in shapes and levels, hints, difficulty modes, sound and speed settings, and the tool for making your own levels from a picture.</p>
+        <p>This licence covers playing the game, not owning it. Everything not expressly allowed here is reserved to us.</p>
+      </article>
+
+      <article class="clause" id="t-rules">
+        <h3>What you may not do</h3>
+        <p>Without our written permission, please do not:</p>
+        <ul>
+          <li>copy, sell, rent, sublicense or otherwise commercially exploit the game or any part of it;</li>
+          <li>re-upload, mirror, rehost or republish the game, or embed it on another site as if it were yours;</li>
+          <li>reverse engineer, decompile or extract the code, artwork or level data, except to the extent the law gives you that right regardless of this clause;</li>
+          <li>remove or hide copyright notices, credits or licence information;</li>
+          <li>use bots, scrapers or other automated means to copy the game’s content or to place unusual load on the places where it is hosted;</li>
+          <li>use the game to break the law, to harass or harm others, or to interfere with the game or the platform it is delivered on;</li>
+          <li>present the game, its levels or its artwork as your own work.</li>
+        </ul>
+        <p>Sharing a link to the game, telling friends about it, and posting your own screenshots or videos of you playing are all welcome.</p>
+      </article>
+
+      <article class="clause" id="t-ownership">
+        <h3>Ownership</h3>
+        <p>The game, including its levels, shape designs, puzzle logic, artwork, sounds, text and source code, is owned by Logic Arc Studios and protected by copyright and other laws. The sounds and artwork in the game are generated in code. All rights reserved. Copyright © Logic Arc Studios.</p>
+        <p>The one exception is open-source software that we use under its own licence, described next. The name “Wispaway” and the Logic Arc Studios name are ours, and you may not use them in a way that suggests we endorse you or your product.</p>
+      </article>
+
+      <article class="clause" id="t-oss">
+        <h3>Open-source software and credits</h3>
+        <p>The celebration effect in the game uses <strong>canvas-confetti</strong> by Kiril Vatev, available under the ISC Licence (copyright 2020 Kiril Vatev), loaded from the jsDelivr network. That software belongs to its authors and is used under the terms of its own licence, not under these terms.</p>
+        <p>Apart from that, the game’s sounds and artwork are created in code by us.</p>
+      </article>
+
+      <article class="clause" id="t-pictures">
+        <h3>Pictures and levels you make</h3>
+        <p>The game lets you turn a picture into a level. You are responsible for the pictures you choose. Please follow these rules:</p>
+        <ul>
+          <li>Only use pictures you own, have permission to use, or that are free to use for this purpose.</li>
+          <li>Do not use pictures that are unlawful, that infringe someone else’s rights, or that show people who have not agreed to be shown, especially private or intimate images.</li>
+          <li>Do not use pictures of children without the permission of a parent or guardian.</li>
+        </ul>
+        <p>Your pictures stay on your device. We do not receive them, store them or review them, so we cannot check them, and we cannot be responsible for what you choose to use. You keep whatever rights you already had in your pictures. Any level you create is generated on your device for your own use.</p>
+        <p>If you decide to share a screenshot or recording of a level you made, that sharing is your own choice and your own responsibility.</p>
+      </article>
+
+      <article class="clause" id="t-saves">
+        <h3>Saved progress and your device</h3>
+        <p>The game saves your progress and settings in your browser’s local storage (see <a href="#p-device">What is stored on your device</a>). Because that data lives only on your device, it can be lost if you clear your browser data, use private or incognito mode, switch browser or device, or if your browser removes it to free up space.</p>
+        <p>We have no copy of your progress and cannot restore it. You are responsible for your own device, browser and internet connection.</p>
+      </article>
+
+      <article class="clause" id="t-portals">
+        <h3>Third-party portals and platforms</h3>
+        <p>The game may be offered on websites, game portals or app stores that we do not run, for example GitHub Pages, itch.io, CrazyGames, Poki, GameMonetize or similar services. Those platforms have their own terms, privacy practices and sometimes advertising. When you use their service, their terms apply to that service in addition to these terms. If the two conflict on a matter that concerns the platform’s own service, the platform’s terms win for that matter.</p>
+        <p>We are not responsible for the content, behaviour or policies of third-party platforms.</p>
+      </article>
+
+      <article class="clause" id="t-changes-game">
+        <h3>Changes to the game and its availability</h3>
+        <p>We may update, add, change, pause or remove any part of the game, including levels, features and difficulty modes, at any time and without notice. We do not promise that the game will always be available, uninterrupted, error-free or compatible with every browser or device. We have no obligation to provide updates, support or maintenance.</p>
+        <p>Updates may change how saved progress works. We will try to keep your progress safe, but cannot guarantee it.</p>
+      </article>
+
+      <article class="clause" id="t-warranty">
+        <h3>No warranty</h3>
+        <p>The game is provided <strong>“as is” and “as available”</strong>, without warranties of any kind, whether express or implied. This includes any implied warranties of merchantability, fitness for a particular purpose, non-infringement, and any promise that the game will meet your expectations or be free of bugs.</p>
+        <p>Puzzle difficulty is a matter of taste. A level that feels too hard or too easy is not a defect.</p>
+      </article>
+
+      <article class="clause" id="t-liability">
+        <h3>Limit of liability</h3>
+        <p>To the fullest extent the law allows, Logic Arc Studios will not be liable for any indirect, incidental, special, consequential or punitive loss or damage, or for any loss of progress, data, profits or goodwill, arising out of or related to your use of (or inability to use) the game.</p>
+        <p>To the extent we cannot lawfully exclude liability, our total liability to you for all claims is limited to the amount you paid us for the game, if anything.</p>
+        <div class="callout">
+          <p>Nothing in these terms limits any right you have as a consumer under the law where you live, and nothing excludes liability that cannot lawfully be excluded.</p>
+        </div>
+      </article>
+
+      <article class="clause" id="t-feedback">
+        <h3>Feedback and ideas</h3>
+        <p>We love hearing how to make Wispaway better. If you send us suggestions, bug reports or ideas, you agree that we may use them freely, without payment or credit, and without any obligation to you. Please do not send us anything you consider confidential.</p>
+      </article>
+
+      <article class="clause" id="t-ending">
+        <h3>Ending or suspending your use</h3>
+        <p>You can stop using the game at any time. We may withdraw your licence to play, or restrict access to the game, if you seriously or repeatedly break these terms. When your licence ends, you must stop using the game, and clauses that by their nature should continue (ownership, no warranty, limit of liability and governing law) will continue to apply.</p>
+      </article>
+
+      <article class="clause" id="t-law">
+        <h3>Governing law and disputes</h3>
+        <p>These terms are governed by the laws of the country in which Logic Arc Studios is established, without regard to conflict-of-law rules. If you have a problem, please email us first at the address below. Most issues can be sorted out quickly and informally. If they cannot, the courts of that country will have jurisdiction, except where mandatory consumer law in your home country gives you the right to use your local courts.</p>
+      </article>
+
+      <article class="clause" id="t-general">
+        <h3>General terms</h3>
+        <ul>
+          <li><strong>Whole agreement.</strong> These terms and the Privacy Policy are the whole agreement between you and us about the game.</li>
+          <li><strong>If part is invalid.</strong> If any part of these terms is found unenforceable, the rest stays in force.</li>
+          <li><strong>No waiver.</strong> If we do not enforce a right straight away, we have not given it up.</li>
+          <li><strong>No transfer.</strong> You may not transfer your rights under these terms. We may transfer ours, for example if the game is sold or moved to a new publisher.</li>
+          <li><strong>Language.</strong> If these terms are translated, the English version controls if there is a difference.</li>
+        </ul>
+      </article>
+
+      <article class="clause" id="t-terms-changes">
+        <h3>Changes to these terms</h3>
+        <p>We may update these terms from time to time, for example when we add features or when the law changes. When we do, we will change the “Last updated” date at the top of this page. If you keep playing after an update, you accept the updated terms. If you disagree with a change, please stop playing.</p>
+      </article>
+
+      <article class="clause" id="t-contact">
+        <h3>Contact about these terms</h3>
+        <p>Questions, permission requests (for example to feature the game on your site) or concerns about these terms:</p>
+        <div class="contactbox">
+          <a href="mailto:Poonamanime5509@gmail.com">Poonamanime5509@gmail.com</a>
+          <button type="button" data-copy="Poonamanime5509@gmail.com">Copy address</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== PART B: PRIVACY ===================== -->
+    <section class="part" id="privacy" aria-labelledby="privacy-title">
+      <header>
+        <h2 id="privacy-title">Privacy Policy</h2>
+        <p>Wispaway is built to need as little from you as possible. Here is exactly what that means.</p>
+      </header>
+
+      <article class="clause" id="p-who">
+        <h3>Who is responsible</h3>
+        <p>Wispaway is published by <strong>Logic Arc Studios</strong> (“we”). For anything about privacy, contact us at <a href="mailto:Poonamanime5509@gmail.com">Poonamanime5509@gmail.com</a>.</p>
+      </article>
+
+      <article class="clause" id="p-nothing">
+        <h3>What we collect: nothing</h3>
+        <p>We do not collect, store, share or sell personal information. The game has:</p>
+        <ul>
+          <li>no accounts and no sign-in;</li>
+          <li>no analytics, tracking pixels or session recording;</li>
+          <li>no advertising code of our own;</li>
+          <li>no server of ours that receives anything you do in the game. The only outside request the game makes is to load the confetti effect (see “Third-party code” below).</li>
+        </ul>
+        <p>The game does not ask for your name, email address, phone number, location or contacts.</p>
+      </article>
+
+      <article class="clause" id="p-device">
+        <h3>What is stored on your device</h3>
+        <p>To remember where you left off, the game saves a small amount of data in your browser’s <strong>local storage</strong>. This data stays on your device. We never see it and it is never sent to us.</p>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr><th scope="col">What is saved</th><th scope="col">Why</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Your current level and the levels you have unlocked</td><td>So you can continue where you stopped and your progress carries over between visits.</td></tr>
+              <tr><td>The puzzle you are in the middle of</td><td>So an unfinished level can be picked up again.</td></tr>
+              <tr><td>Difficulty mode</td><td>So the game opens in the mode you chose.</td></tr>
+              <tr><td>Settings: sound, volume, vibration, effects, speed and light/dark theme</td><td>So the game feels the way you set it.</td></tr>
+              <tr><td>Whether you have played before</td><td>So the start screen can show New Game or Continue.</td></tr>
+              <tr><td>“My Levels”: levels you made from pictures</td><td>So you can replay them later. Only a simplified black-and-white grid of the shape is saved, plus the name and difficulty you chose, not the picture itself.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Removing it.</strong> The game’s Settings has a reset option that sends your levels back to the start (your saved picture levels are kept). To delete everything, including “My Levels”, clear site data for the game in your browser settings. Using private or incognito mode means nothing is kept after you close the window.</p>
+      </article>
+
+      <article class="clause" id="p-pictures">
+        <h3>Pictures you choose</h3>
+        <p>If you make a level from a picture, the image is processed <strong>inside your browser only</strong>. It is never uploaded to us or to anyone else, and we cannot see it. When you choose a picture, your browser shows its normal file picker, and the game receives only the file you pick.</p>
+        <p>The game turns the picture into a simplified black-and-white shape. If you save that level to “My Levels”, only the shape is stored on your device, not your original photo.</p>
+        <p>Please read the <a href="#t-pictures">Terms about pictures</a> to see what is and is not appropriate to use.</p>
+      </article>
+
+      <article class="clause" id="p-voice">
+        <h3>Sound and voice</h3>
+        <p>Game sounds are generated in code on your device, and nothing is recorded. The game may use your device’s vibration feature on supported phones. You can turn sound and vibration off in the settings.</p>
+        <p>If a future version uses your browser’s built-in text-to-speech to read text aloud, note that, depending on your browser and device, the browser itself may use an online voice service. That is controlled by your browser or operating system, not by us.</p>
+      </article>
+
+      <article class="clause" id="p-hosting">
+        <h3>Where the game is hosted</h3>
+        <p>The game is delivered over the internet from a hosting service or portal, for example GitHub Pages, itch.io or a game portal. Like almost any website, those services may automatically record technical information when your browser requests the page, such as your IP address, browser type, device type and the time of the request, and they may keep that in server logs.</p>
+        <p>That logging is done by the host under its own privacy policy. We do not receive that information from the host in a form that identifies you, and we do not use it to profile you.</p>
+      </article>
+
+      <article class="clause" id="p-cookies">
+        <h3>Cookies and similar technology</h3>
+        <p>Wispaway itself does not set tracking or advertising cookies. It uses local storage only to save the progress and settings listed above. A hosting platform or portal may use cookies of its own. See the next two sections.</p>
+      </article>
+
+      <article class="clause" id="p-ads">
+        <h3>Advertising and third-party portals</h3>
+        <p>The version of the game published by us carries no advertising. If the game is played on a portal or app store that shows ads, for example CrazyGames, Poki, GameMonetize or Google AdMob, those services may use cookies, device or advertising identifiers and similar technology to show ads, measure performance and prevent fraud. They do that under their own privacy policies and on their own responsibility.</p>
+        <p>Where the law requires it (for example in the European Economic Area, the United Kingdom and California), those services should ask for your consent and give you a way to change your choice. We do not receive personal data from these services, and we do not sell or share your personal information, because we have none.</p>
+      </article>
+
+      <article class="clause" id="p-thirdparty">
+        <h3>Third-party code</h3>
+        <p>The game uses the open-source <strong>canvas-confetti</strong> library to draw celebration effects. It runs in your browser and does not collect data. The library file is loaded from the <strong>jsDelivr</strong> content delivery network (cdn.jsdelivr.net). When your browser fetches that file, jsDelivr can see your IP address and browser details, the same as for any website resource, and handles them under its own privacy policy. This is the only outside service the game itself contacts.</p>
+      </article>
+
+      <article class="clause" id="p-children">
+        <h3>Children</h3>
+        <p>Wispaway does not knowingly collect personal information from anyone, including children under 13 (or the higher age of digital consent in your country). Because the game has no accounts, no chat and no data collection, there is no personal information from children for us to handle. If you are a parent or guardian and have a concern, please contact us and we will look into it.</p>
+        <p>We still encourage parents to look at the privacy settings of the browser, device and any portal their child uses to play.</p>
+      </article>
+
+      <article class="clause" id="p-rights">
+        <h3>Your rights and choices</h3>
+        <p>Privacy laws such as the EU and UK GDPR, California’s CCPA/CPRA and India’s Digital Personal Data Protection Act, 2023, give people rights over their personal data, including the rights to access, correct, delete, move or object to the use of it, and to withdraw consent.</p>
+        <p>Because we hold no personal data about you, there is nothing for us to access, correct, delete or export. The only data about your play is in your own browser, and you control it directly: you can view, change or delete it through your browser settings at any time.</p>
+        <p>You are always welcome to email us with any privacy question or request, and we will reply. If you are not satisfied with an answer, you may also contact the data protection authority in your country.</p>
+      </article>
+
+      <article class="clause" id="p-security">
+        <h3>Security</h3>
+        <p>The safest data is data that is never collected. We do not gather your information, so there is no database of it to lose. The progress saved on your device is protected by the security of your own device and browser, so we recommend keeping both up to date and using a device lock.</p>
+      </article>
+
+      <article class="clause" id="p-retention">
+        <h3>How long data is kept</h3>
+        <p>We keep nothing on our side. Data saved in your browser stays there until you clear it, until your browser removes it, or until you uninstall or reset the browser.</p>
+      </article>
+
+      <article class="clause" id="p-international">
+        <h3>Players around the world</h3>
+        <p>The game can be played from anywhere. Because the game does not send your personal information to us, we do not transfer it between countries. Hosting services and portals may process technical data in other countries as described in their own policies.</p>
+      </article>
+
+      <article class="clause" id="p-changes">
+        <h3>Changes to this policy</h3>
+        <p>If we ever change how the game handles data, for example by adding features that use new browser storage or a service that handles information, we will update this policy and change the “Last updated” date at the top of the page <em>before</em> the change reaches players. We will never add tracking or collect personal information without telling you here first.</p>
+      </article>
+
+      <article class="clause" id="p-contact">
+        <h3>Contact about privacy</h3>
+        <p>Any question about this policy, your data or your rights:</p>
+        <div class="contactbox">
+          <a href="mailto:Poonamanime5509@gmail.com">Poonamanime5509@gmail.com</a>
+          <button type="button" data-copy="Poonamanime5509@gmail.com">Copy address</button>
+        </div>
+      </article>
+    </section>
+
+  </main>
+</div>
+
+<footer class="site">
+  <span>© Logic Arc Studios. All rights reserved.</span>
+  <span>Wispaway Terms of Use &amp; Privacy Policy · Last updated October 9, 2026</span>
+</footer>
+
+<script>
+(function(){
+  /* Build the contents list from the clause headings so it never drifts out of sync */
+  function build(partId, listId){
+    var list = document.getElementById(listId);
+    var items = document.querySelectorAll('#'+partId+' .clause');
+    items.forEach(function(el){
+      var h = el.querySelector('h3');
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#'+el.id;
+      a.textContent = h.textContent;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  }
+  build('terms','tocTerms');
+  build('privacy','tocPrivacy');
+
+  /* Contents panel: always open on wide screens, collapsible on phones */
+  var details = document.getElementById('tocDetails');
+  var wide = window.matchMedia('(min-width: 900px)');
+  function sync(){ details.open = wide.matches; }
+  sync();
+  if (wide.addEventListener) wide.addEventListener('change', sync); else wide.addListener(sync);
+  details.addEventListener('click', function(e){
+    if (e.target.tagName === 'A' && !wide.matches) details.open = false;
+  });
+
+  /* Highlight the clause currently being read */
+  var links = {};
+  document.querySelectorAll('.toc a').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+  var current = null;
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          if (current) current.classList.remove('on');
+          current = links[en.target.id];
+          if (current) current.classList.add('on');
+        }
+      });
+    }, {rootMargin:'-15% 0px -70% 0px'});
+    document.querySelectorAll('.clause').forEach(function(c){ io.observe(c); });
+  }
+
+  /* Copy email buttons */
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = btn.getAttribute('data-copy');
+      var done = function(){
+        var old = btn.textContent; btn.textContent = 'Copied';
+        setTimeout(function(){ btn.textContent = old; }, 1600);
+      };
+      var fallback = function(){
+        var t = document.createElement('textarea');
+        t.value = text; t.setAttribute('readonly',''); t.style.position='fixed'; t.style.opacity='0';
+        document.body.appendChild(t); t.select();
+        try { if (document.execCommand('copy')) done(); } catch(e){}
+        document.body.removeChild(t);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
